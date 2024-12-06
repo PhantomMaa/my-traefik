@@ -27,9 +27,9 @@ metadata:
   namespace: {{ . }}
 spec:
   secretName: wildcard-tls-certificate
-  commonName: "*.{{ .Values.config.domain }}"
+  commonName: "*.{{ $.Values.config.domain }}"
   dnsNames:
-    - "*.{{ .Values.config.domain }}"
+    - "*.{{ $.Values.config.domain }}"
   issuerRef:
     name: cert-cluster-issuer
     kind: ClusterIssuer
