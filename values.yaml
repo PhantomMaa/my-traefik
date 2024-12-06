@@ -8,18 +8,17 @@ traefik:
         - infra
 
 certmanager:
-  crds:
-    enabled: true
+  fullnameOverride: my-certmanager
 
 config:
   domain: xxx.com
   https: 
     enabled: true
     cloudflareApiToken: XXX
-    email: xxx
+    email: xxx@xxx.com
   auth: 
     enabled: true
-    username: admin
-    password: admin
+    username: xxx== # echo -n 'admin' | base64
+    password: xxx== # echo -n '123456' | base64
   cors: 
     enabled: true
