@@ -1,0 +1,25 @@
+traefik:
+  providers:
+    kubernetesCRD:
+      enabled: true
+      allowCrossNamespace: true
+      namespaces:
+        - default
+        - infra
+
+certmanager:
+  crds:
+    enabled: true
+
+config:
+  domain: xxx.com
+  https: 
+    enabled: true
+    cloudflareApiToken: XXX
+    email: xxx
+  auth: 
+    enabled: true
+    username: admin
+    password: admin
+  cors: 
+    enabled: true
