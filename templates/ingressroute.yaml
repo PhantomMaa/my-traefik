@@ -15,8 +15,10 @@ spec:
       services:
         - name: api@internal
           kind: TraefikService
+{{- if eq .Values.config.auth.enabled true }}
       middlewares:
         - name: user-auth
+{{- end }}
 {{- if eq .Values.config.https.enabled true }}
   tls:
     secretName: wildcard-tls-certificate
