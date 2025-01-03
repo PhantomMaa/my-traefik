@@ -16,4 +16,4 @@ dependencies:
     condition: config.https.enabled
   - name: traefik
     repository: https://helm.traefik.io/traefik
-    version: 33.1.0
+    version: 33.2.1
